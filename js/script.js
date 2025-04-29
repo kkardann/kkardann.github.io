@@ -25,7 +25,7 @@ function fetchMovieDetails(id, type, container) {
             const imageContainer = document.createElement('div');
             imageContainer.classList.add('card-image-container');
 
-            const posterPath = details.poster_path ? `https://image.tmdb.org/t/p/w200${details.poster_path}` : 'images/no-poster-small.jpg';
+            const posterPath = details.poster_path ? `https://image.tmdb.org/t/p/w500${details.poster_path}` : 'images/no-poster-small.jpg';
             const poster = document.createElement('img');
             poster.src = posterPath;
             poster.alt = details.title || details.name || 'Без назви';

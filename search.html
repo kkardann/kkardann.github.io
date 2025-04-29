@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Поиск - Моя библиотека фильмов и сериалов</title>
+    <title>Пошук</title>
     <link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
@@ -12,18 +12,17 @@
 		<h1>MyMovieList</h1>
 		<nav>
 			<ul>
-				<li><a href="index.html">Главная</a></li>
-				<li><a href="movies.html">Фильмы</a></li>
-				<li><a href="series.html">Сериалы</a></li>
-				<li><a href="actors.html">Актеры</a></li>
-				<li><a href="library.html">Моя библиотека</a></li>
+				<li><a href="index.html">Головна</a></li>
+				<li><a href="movies.html">Фільми</a></li>
+				<li><a href="tw.html">Серіали</a></li>
+				<li><a href="tw.html">Моя кінотека</a></li>
 			</ul>
 		</nav>
 
 		<div class="search-container">
 			<form class="search-form" onsubmit="return handleSearch(event)">
-				<input type="text" id="search-input" placeholder="Введите запрос...">
-				<button type="submit" id="search-button">Поиск</button>
+				<input type="text" id="search-input" placeholder="Введіть запит...">
+				<button type="submit" id="search-button">Пошук</button>
 			</form>
 			<ul id="search-suggestions" class="search-suggestions"></ul>
 		</div>
@@ -34,7 +33,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Моя библиотека фильмов и сериалов</p>
+        <p>&copy; 2025 MyMovieList</p>
     </footer>
 
     <script src="js/script.js"></script>

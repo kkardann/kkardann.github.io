@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyMovieList - Моя кінотека</title>
+    <title>Технічні роботи</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/library.css">
+    <style>
+        main#technical-work {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1; /* Займає доступний простір між хедером і футером */
+        }
+        #technical-work .container {
+            text-align: center; /* Центрування тексту всередині контейнера */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -15,7 +25,7 @@
                 <li><a href="index.html">Головна</a></li>
                 <li><a href="movies.html">Фільми</a></li>
                 <li><a href="tw.html">Серіали</a></li>
-                <li><a href="tw.html" class="active">Моя кінотека</a></li>
+                <li><a href="tw.html">Моя кінотека</a></li>
             </ul>
         </nav>
 
@@ -28,31 +38,12 @@
         </div>
     </header>
 
-    <main id="library-page">
-        <section id="favorites">
-            <h2>Улюблене</h2>
-            <div class="favorites-list"></div>
-        </section>
-
-        <section id="planned">
-            <h2>Заплановано</h2>
-            <div class="planned-list"></div>
-        </section>
-
-        <section id="watched">
-            <h2>Переглянуто</h2>
-            <div class="watched-list"></div>
-        </section>
-
-        <section id="on-hold">
-            <h2>Відкладено</h2>
-            <div class="on-hold-list"></div>
-        </section>
-
-        <section id="dropped">
-            <h2>Закинуто</h2>
-            <div class="dropped-list"></div>
-        </section>
+    <main id="technical-work">
+        <div class="container">
+            <h1>Технічні роботи</h1>
+            <p>Вибачте, даний розділ знаходиться на стадії розробки.</p>
+            <p>Будь ласка, зайдіть пізніше.</p>
+        </div>
     </main>
 
     <footer>
@@ -60,6 +51,5 @@
     </footer>
 
     <script src="js/script.js"></script>
-    <script src="js/library.js"></script>
 </body>
 </html>
