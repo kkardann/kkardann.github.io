@@ -1,0 +1,64 @@
+/* ============================== */
+/* Пагинация */
+/* ============================== */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 8px 15px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #333;
+    color: #e0e0e0;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+    background-color: #616161;
+}
+
+.pagination button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+.pagination .active {
+    background-color: #616161;
+    color: #fff;
+}
+
+.pagination .page-number {
+    padding: 8px 12px;
+    border-radius: 50%;
+    background-color: #333;
+    color: #e0e0e0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination .page-number:hover {
+    background-color: #616161;
+}
+
+.pagination .page-number.active {
+    background-color: #ff9800;
+    color: #fff;
+}
+
+/* Для мобильных устройств, чтобы пагинация выглядела корректно */
+@media (max-width: 768px) {
+    .pagination {
+        gap: 5px;
+    }
+
+    .pagination button,
+    .pagination .page-number {
+        font-size: 0.9rem;
+    }
+}

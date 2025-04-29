@@ -1,0 +1,179 @@
+/* Контейнер для деталей */
+#details-container {
+    background-color: #272727;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Изображение постера */
+#details-container img {
+    max-width: 300px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Информация о фильме */
+.details-info {
+    flex: 1;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Заголовок фильма */
+.details-info h1 {
+    color: #f5f5f5;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    margin-bottom: 10px;
+}
+
+/* Стилизация мета-данных (рейтинг, жанры и длительность) */
+.meta {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.meta span {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.genres-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.genres-list li {
+    display: inline-block;
+    background-color: #333;
+    color: #eee;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    margin-right: 10px;
+}
+
+/* Описание фильма */
+.overview {
+    font-size: 1.1rem;
+    margin-top: 20px;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Стилизация для кнопок */
+.library-actions {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.library-actions h3 {
+    color: #f5f5f5;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.library-actions button {
+    padding: 12px 25px;
+    background: linear-gradient(145deg, #424242, #616161); /* Темно-серый градиент */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 10px;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    display: inline-block;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Эффект на кнопках при наведении */
+.library-actions button:hover {
+    background: linear-gradient(145deg, #616161, #424242); /* Изменение направления градиента */
+    transform: translateY(-2px);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Эффект нажатия (вдавливание) */
+.library-actions button:active {
+    transform: translateY(2px);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    #details-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #details-container img {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .details-info {
+        text-align: center;
+    }
+
+    .library-actions {
+        width: 100%;
+        text-align: center;
+    }
+
+    .library-actions button {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+.notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #027d07;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 999;
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-10px);
+    pointer-events: auto;
+}
+
+.library-actions button.active {
+    background-color: #38b000;
+    color: white;
+}
+
+.library-actions button.active:hover {
+    background-color: #d90429;
+}
+
+.library-actions button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+

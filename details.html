@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> MyMovieList</title>
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/details.css">
+</head>
+<body>
+	<header>
+		<h1>MyMovieList</h1>
+		<nav>
+			<ul>
+				<li><a href="index.html">Головна</a></li>
+				<li><a href="movies.html">Фільми</a></li>
+				<li><a href="series.html">Серіали</a></li>
+				<li><a href="library.html">Моя кінотека</a></li>
+			</ul>
+		</nav>
+
+		<div class="search-container">
+			<form class="search-form" onsubmit="return handleSearch(event)">
+				<input type="text" id="search-input" placeholder="Введіть запит...">
+				<button type="submit" id="search-button">Пошук</button>
+			</form>
+			<ul id="search-suggestions" class="search-suggestions"></ul>
+		</div>
+	</header>
+
+    <main id="details-container">
+        <p>Загрузка...</p>
+        <div class="library-actions">
+            <h3>Действия</h3>
+			<button id="add-to-library">Додати до бібліотеки</button>
+			<select id="library-category">
+			  <option value="favorites">Улюблене</option>
+			  <option value="planned">Заплановане</option>
+			  <option value="watched">Переглянуте</option>
+			  <option value="onHold">В очікуванні</option>
+			  <option value="dropped">Кинуто</option>
+			</select>
+
+        </div>
+    </main>
+
+	<div id="notification" class="notification"></div>
+
+    <footer>
+        <p>&copy; 2025 MyMovieList</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+	<script src="js/details.js"></script>
+</body>
+</html>

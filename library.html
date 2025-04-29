@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyMovieList - Моя кінотека</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/library.css">
+</head>
+<body>
+    <header>
+        <h1>MyMovieList</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="movies.html">Фільми</a></li>
+                <li><a href="series.html">Серіали</a></li>
+                <li><a href="library.html" class="active">Моя кінотека</a></li>
+            </ul>
+        </nav>
+
+        <div class="search-container">
+            <form class="search-form" onsubmit="return handleSearch(event)">
+                <input type="text" id="search-input" placeholder="Введіть запит...">
+                <button type="submit" id="search-button">Пошук</button>
+            </form>
+            <ul id="search-suggestions" class="search-suggestions"></ul>
+        </div>
+    </header>
+
+    <main id="library-page">
+        <section id="favorites">
+            <h2>Улюблене</h2>
+            <div class="favorites-list"></div>
+        </section>
+
+        <section id="planned">
+            <h2>Заплановано</h2>
+            <div class="planned-list"></div>
+        </section>
+
+        <section id="watched">
+            <h2>Переглянуто</h2>
+            <div class="watched-list"></div>
+        </section>
+
+        <section id="on-hold">
+            <h2>Відкладено</h2>
+            <div class="on-hold-list"></div>
+        </section>
+
+        <section id="dropped">
+            <h2>Закинуто</h2>
+            <div class="dropped-list"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 MyMovieList</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/library.js"></script>
+</body>
+</html>

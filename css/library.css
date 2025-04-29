@@ -1,0 +1,61 @@
+/* Стили для контейнера карточки */
+.movie-card, .series-card {
+    display: flex;
+    flex-direction: column;
+    width: 200px;  /* Можно настроить размер карточки */
+    margin: 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для контейнера изображения */
+.card-image-container {
+    width: 100%;
+    height: 300px; /* Высота изображения */
+    overflow: hidden;
+}
+
+.card-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Обеспечивает правильное отображение изображений */
+}
+
+/* Стили для деталей карточки */
+.card-details {
+    padding: 10px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* Стили для заголовка */
+.card-details h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Стили для текста карточки */
+.card-details p {
+    font-size: 14px;
+    color: #666;
+}
+
+.delete-button {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8em;
+    margin-top: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #f44336;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyMovieList - Каталог фільмів</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/movies.css">
+</head>
+<body>
+	<header>
+		<h1>MyMovieList</h1>
+		<nav>
+			<ul>
+				<li><a href="index.html">Головна</a></li>
+				<li><a href="movies.html" class="active">Фільми</a></li>
+				<li><a href="series.html">Серіали</a></li>
+				<li><a href="library.html">Моя кінотека</a></li>
+			</ul>
+		</nav>
+		
+		<div class="search-container">
+			<form class="search-form" onsubmit="return handleSearch(event)">
+				<input type="text" id="search-input" placeholder="Введіть запит...">
+				<button type="submit" id="search-button">Пошук</button>
+			</form>
+			<ul id="search-suggestions" class="search-suggestions"></ul>
+		</div>
+		
+	</header>
+
+    <main>
+		<section id="movie-catalog">
+			<h2>Каталог фільмів</h2>
+			<div class="movie-list">
+			</div>
+			<div class="pagination">
+			</div>
+		</section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 MyMovieList</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+	<script src="js/movies.js"></script>
+</body>
+</html>

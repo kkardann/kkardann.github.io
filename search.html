@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск - Моя библиотека фильмов и сериалов</title>
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header>
+		<h1>MyMovieList</h1>
+		<nav>
+			<ul>
+				<li><a href="index.html">Главная</a></li>
+				<li><a href="movies.html">Фильмы</a></li>
+				<li><a href="series.html">Сериалы</a></li>
+				<li><a href="actors.html">Актеры</a></li>
+				<li><a href="library.html">Моя библиотека</a></li>
+			</ul>
+		</nav>
+
+		<div class="search-container">
+			<form class="search-form" onsubmit="return handleSearch(event)">
+				<input type="text" id="search-input" placeholder="Введите запрос...">
+				<button type="submit" id="search-button">Поиск</button>
+			</form>
+			<ul id="search-suggestions" class="search-suggestions"></ul>
+		</div>
+	</header>
+
+    <main>
+        <div id="search-results" class="movie-list"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Моя библиотека фильмов и сериалов</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+	<script src="js/search.js"></script>
+</body>
+</html>
