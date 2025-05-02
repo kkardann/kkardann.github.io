@@ -1,4 +1,3 @@
-// Загрузка деталей фильма
 function fetchMovieDetails(id, type, container) {
     const language = 'uk';
     let apiUrl = type === 'movie'
@@ -59,7 +58,6 @@ function fetchMovieDetails(id, type, container) {
         });
 }
 
-// Загрузка библиотеки
 function loadLibrary() {
     const library = JSON.parse(localStorage.getItem('myLibrary')) || {};
     const categories = ['favorites', 'planned', 'watched', 'onHold', 'dropped'];
@@ -69,7 +67,7 @@ function loadLibrary() {
         const container = document.querySelector(`#${category} .${category}-list`);
         if (!container) return;
 
-        container.innerHTML = ''; // Очищаем старые элементы
+        container.innerHTML = '';
 
         items.forEach(item => {
             fetchMovieDetails(item.id, item.type, container);
@@ -77,7 +75,6 @@ function loadLibrary() {
     });
 }
 
-// Удаление фильма из библиотеки
 function removeMovieFromLibrary(id, type) {
     const library = JSON.parse(localStorage.getItem('myLibrary')) || {};
 
@@ -89,7 +86,6 @@ function removeMovieFromLibrary(id, type) {
     updateLibraryList();
 }
 
-// Перерисовка списка фильмов на странице "Моя кінотека"
 function updateLibraryList() {
     const library = JSON.parse(localStorage.getItem('myLibrary')) || {};
     const categories = ['favorites', 'planned', 'watched', 'onHold', 'dropped'];
@@ -99,7 +95,7 @@ function updateLibraryList() {
         if (!container) return;
 
         const items = library[category] || [];
-        container.innerHTML = ''; // Очистим старые элементы
+        container.innerHTML = '';
 
         items.forEach(item => {
             const movieItem = document.createElement('div');
@@ -112,7 +108,6 @@ function updateLibraryList() {
         });
     });
 
-    // Слушаем кнопки "Видалити"
     document.querySelectorAll('.remove-from-library').forEach(button => {
         button.addEventListener('click', () => {
             const id = button.getAttribute('data-id');
@@ -162,8 +157,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 });
 
-
-// Обновление между вкладками
 window.addEventListener('storage', () => {
     loadLibrary();
     updateLibraryList();
