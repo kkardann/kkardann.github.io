@@ -1,8 +1,7 @@
 const apiKey = '098fd185c0226f48ab7a946a330681cf';
 
-// Функция для загрузки деталей фильма
 function fetchMovieDetails(id, type, container) {
-    const language = 'uk'; // Фиксированный украинский язык
+    const language = 'uk';
 
     let apiUrl = '';
     if (type === 'movie') {
@@ -53,7 +52,6 @@ function fetchMovieDetails(id, type, container) {
         });
 }
 
-// Пошук
 function handleSearch(event) {
     event.preventDefault();
     const searchInput = document.querySelector('#search-input');
@@ -67,7 +65,6 @@ function handleSearch(event) {
     }
 }
 
-// Додавання до бібліотеки
 function setupLibraryButtons() {
     const urlParams = new URLSearchParams(window.location.search);
     const type = urlParams.get('type');
