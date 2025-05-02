@@ -1,4 +1,3 @@
-/* Контейнер для деталей */
 #details-container {
     background-color: #272727;
     padding: 20px;
@@ -12,7 +11,6 @@
     margin: 45px auto;
 }
 
-/* Изображение постера */
 #details-container img {
     max-width: 300px;
     width: 100%;
@@ -21,21 +19,18 @@
 
 }
 
-/* Информация о фильме */
 .details-info {
     flex: 1;
     color: #e0e0e0;
     line-height: 1.6;
 }
 
-/* Заголовок фильма */
 .details-info h1 {
     color: #f5f5f5;
     font-size: clamp(2rem, 5vw, 2.8rem);
     margin-bottom: 10px;
 }
 
-/* Стилизация мета-данных (рейтинг, жанры и длительность) */
 .meta {
     display: flex;
     gap: 15px;
@@ -63,7 +58,6 @@
     margin-right: 10px;
 }
 
-/* Описание фильма */
 .overview {
     font-size: 1.1rem;
     margin-top: 20px;
@@ -71,7 +65,6 @@
     line-height: 1.6;
 }
 
-/* Стилизация для кнопок */
 .library-actions {
     margin-top: 20px;
     width: 100%;
@@ -88,7 +81,7 @@
 
 .library-actions button {
     padding: 12px 25px;
-    background: linear-gradient(145deg, #424242, #616161); /* Темно-серый градиент */
+    background: linear-gradient(145deg, #424242, #616161);
     color: white;
     border: none;
     border-radius: 8px;
@@ -100,22 +93,17 @@
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Эффект на кнопках при наведении */
 .library-actions button:hover {
-    background: linear-gradient(145deg, #616161, #424242); /* Изменение направления градиента */
+    background: linear-gradient(145deg, #616161, #424242);
     transform: translateY(-2px);
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Эффект нажатия (вдавливание) */
 .library-actions button:active {
     transform: translateY(2px);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-
-
-/* Адаптивность для мобильных устройств */
 @media (max-width: 768px) {
     #details-container {
         flex-direction: column;
