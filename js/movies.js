@@ -1,5 +1,3 @@
-// js/movies.js
-
 function displayMovies(page = 1) {
     const apiKey = '098fd185c0226f48ab7a946a330681cf';
     let apiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=ru&page=${page}&sort_by=popularity.desc`;
@@ -22,12 +20,11 @@ function displayMovies(page = 1) {
                     });
 
                     if (paginationContainer && data.total_pages > 1) {
-                        paginationContainer.innerHTML = ''; // Очищаем контейнер пагинации
+                        paginationContainer.innerHTML = '';
 
                         const totalPages = data.total_pages;
-                        const visiblePages = 5; // Количество видимых страниц в пагинации
+                        const visiblePages = 5;
 
-                        // Кнопка "Назад"
                         if (page > 1) {
                             const prevButton = document.createElement('button');
                             prevButton.textContent = '<';
@@ -35,7 +32,6 @@ function displayMovies(page = 1) {
                             paginationContainer.appendChild(prevButton);
                         }
 
-                        // Первая страница
                         if (page > Math.ceil(visiblePages / 2) + 1) {
                             const firstPageButton = document.createElement('button');
                             firstPageButton.textContent = '1';
@@ -46,7 +42,6 @@ function displayMovies(page = 1) {
                             paginationContainer.appendChild(dotsStart);
                         }
 
-                        // Отображение видимых страниц вокруг текущей
                         const startPage = Math.max(1, page - Math.floor(visiblePages / 2));
                         const endPage = Math.min(totalPages, page + Math.floor(visiblePages / 2));
 
@@ -60,7 +55,6 @@ function displayMovies(page = 1) {
                             paginationContainer.appendChild(pageButton);
                         }
 
-                        // Последняя страница
                         if (page < totalPages - Math.floor(visiblePages / 2)) {
                             const dotsEnd = document.createElement('span');
                             dotsEnd.textContent = '...';
@@ -71,7 +65,6 @@ function displayMovies(page = 1) {
                             paginationContainer.appendChild(lastPageButton);
                         }
 
-                        // Кнопка "Вперед"
                         if (page < totalPages) {
                             const nextButton = document.createElement('button');
                             nextButton.textContent = '>';
@@ -91,5 +84,5 @@ function displayMovies(page = 1) {
 }
 
 if (window.location.pathname.includes('movies.html')) {
-    displayMovies(); // По умолчанию
+    displayMovies();
 }
