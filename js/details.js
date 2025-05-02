@@ -2,7 +2,6 @@ const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get('id');
 const type = urlParams.get('type');
 
-// Глобальна мапа кнопок стану
 const stateButtons = {
     'add-to-planned': 'Заплановано',
     'add-to-watched': 'Переглянуто',
